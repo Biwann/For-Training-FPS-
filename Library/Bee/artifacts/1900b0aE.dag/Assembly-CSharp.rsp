@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/FPSInput.cs"
 "Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/RayShooter.cs"
 -langversion:9.0
 
 /deterministic

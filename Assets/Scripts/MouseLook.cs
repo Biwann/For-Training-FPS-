@@ -16,13 +16,17 @@ public class MouseLook : MonoBehaviour
     [SerializeField] float _sensitivityX = 5f;
     [SerializeField] float _sensitivityY = 5f;
 
-    [SerializeField] float _minimumVert = -90f;
-    [SerializeField] float _maximumVert = 90f;
+    [SerializeField] float _minimumVert = -89f;
+    [SerializeField] float _maximumVert = 89f;
 
     float _rotationX = 0;
 
     private void Start()
     {
+        _rotationX = transform.eulerAngles.x;
+        _minimumVert += _rotationX;
+        _maximumVert += _rotationX;
+
         Rigidbody body = GetComponent<Rigidbody>();
         if (body != null)
             body.freezeRotation = true;
