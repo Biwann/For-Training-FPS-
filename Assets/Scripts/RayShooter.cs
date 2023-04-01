@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngineInternal;
+
 [RequireComponent(typeof(Camera))]
 public class RayShooter : MonoBehaviour
 {
@@ -39,7 +41,16 @@ public class RayShooter : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                StartCoroutine(SphereIndicator(hit.point));
+                GameObject hitObject = hit.transform.gameObject;
+                ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+                if (target != null)
+                {
+                    target.ReactToHit();
+                }
+                else
+                {
+                    StartCoroutine(SphereIndicator(hit.point));
+                }
             }
         }
     }

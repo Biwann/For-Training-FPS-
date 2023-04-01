@@ -352,9 +352,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/EnemyShoot.cs"
+"Assets/Scripts/Fireball.cs"
 "Assets/Scripts/FPSInput.cs"
 "Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/PlayerCharacter.cs"
 "Assets/Scripts/RayShooter.cs"
+"Assets/Scripts/ReactiveTarget.cs"
+"Assets/Scripts/SceneController.cs"
+"Assets/Scripts/WanderingAI.cs"
 -langversion:9.0
 
 /deterministic
